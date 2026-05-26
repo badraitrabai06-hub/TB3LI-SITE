@@ -1,213 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TB3LI | Print On Demand Morocco</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#f6f6f6;color:#111;overflow-x:hidden}
-header{background:#000;color:#fff;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
-.logo{font-size:28px;font-weight:900;letter-spacing:1px}.logo span{color:#ffdf5a}
-nav{display:flex;gap:24px}nav a{color:#fff;text-decoration:none;font-weight:800;font-size:15px}.top-btn{background:#ffdf5a;color:#000;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900}
-.hero{min-height:86vh;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:50px 20px}
-.hero h1{font-size:clamp(48px,10vw,110px);line-height:.9;font-weight:900;margin-bottom:20px}.hero p{font-size:20px;color:#eee;margin-bottom:28px}.badge{display:inline-block;border:1px solid #fff;border-radius:999px;padding:8px 16px;margin-bottom:20px;font-size:13px;letter-spacing:1px;text-transform:uppercase}
-.btn{display:inline-block;background:#000;color:#fff;padding:14px 22px;border-radius:999px;text-decoration:none;font-weight:900;border:none;cursor:pointer}.btn.yellow{background:#ffdf5a;color:#000}.btn:hover{opacity:.88}
-section{padding:76px 22px}.container{max-width:1180px;margin:auto}.section-title{text-align:center;font-size:clamp(34px,6vw,58px);font-weight:900;margin-bottom:10px}.section-subtitle{text-align:center;color:#666;margin-bottom:42px;font-size:17px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}.card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.08);border:1px solid #eee}.card-img{height:340px;background:#eee;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover}.shirt-svg{width:86%;height:86%;filter:drop-shadow(0 18px 20px rgba(0,0,0,.12))}.wac-design{object-fit:contain!important;background:#fff;padding:18px}.content{padding:22px}.content h3{font-size:27px;margin-bottom:8px}.content p{color:#666;line-height:1.55;margin-bottom:16px}.small-note{color:#111!important;background:#f6f6f6;border:1px solid #eee;padding:10px 12px;border-radius:12px;font-size:14px!important;font-weight:800;margin-bottom:16px!important}.price{font-size:28px;font-weight:900;margin-bottom:18px}.tag{display:inline-block;background:#f1f1f1;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900;margin-bottom:12px}
-.custom-box,.login-box{background:#000;color:#fff;border-radius:28px;padding:28px;max-width:760px;margin:auto}label{display:block;margin:16px 0 7px;font-weight:900}select,input,textarea{width:100%;padding:14px;border-radius:14px;border:1px solid #333;font-size:15px}textarea{min-height:110px;resize:vertical}.custom-box .btn,.login-box .btn{width:100%;margin-top:20px;font-size:16px;background:#ffdf5a;color:#000}.admin-panel{display:none;margin-top:24px;background:#111;border:1px solid #333;border-radius:18px;padding:20px}.admin-panel p{color:#ccc;margin-bottom:10px}.warning{background:#fff3cd;color:#5a4300;border-radius:12px;padding:12px;margin-bottom:14px;font-size:14px;font-weight:800}
-.features{background:#000;color:#fff}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.feature{background:#111;border:1px solid #222;border-radius:20px;padding:22px}.feature h3{margin-bottom:8px}.feature p{color:#bbb}
-.contact{background:#111;color:#fff;text-align:center}.contact p{color:#ddd;margin:14px 0 25px;font-size:18px}footer{background:#000;color:#888;text-align:center;padding:22px}.whatsapp{position:fixed;right:22px;bottom:22px;background:#25D366;color:#fff;text-decoration:none;padding:16px 22px;border-radius:999px;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.2);z-index:1001}
-@media(max-width:760px){header{padding:14px 16px}nav{display:none}.top-btn{padding:10px 14px;font-size:13px}.card-img{height:300px}section{padding:58px 16px}.logo{font-size:24px}.whatsapp{right:14px;bottom:14px;padding:14px 18px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TB3LI — Print On Demand</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial,sans-serif}
+    body{background:#0b0b0d;color:#fff;min-height:100vh}
+    .page{max-width:1120px;margin:auto;padding:22px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0 28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:54px;height:54px;border-radius:16px;background:#000;display:grid;place-items:center;overflow:hidden;border:1px solid #24242b}.logo img{width:100%;height:100%;object-fit:cover}
+    .brand h1{font-size:22px;letter-spacing:.5px}.brand p{font-size:12px;color:#aaa;margin-top:3px}
+    .top-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .wa-top,.admin-link{color:#06130a;text-decoration:none;font-weight:900;padding:12px 16px;border-radius:999px;font-size:14px;white-space:nowrap;border:0;cursor:pointer}
+    .wa-top{background:#25D366}.admin-link{background:#fff;color:#090909}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;padding:28px 0 34px}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid #2d2d33;border-radius:999px;color:#ddd;font-size:13px;background:#151519}
+    .hero h2{font-size:clamp(34px,6vw,68px);line-height:.95;margin:18px 0 16px;letter-spacing:-3px}.pink{color:#ff4fa3}
+    .hero p{color:#cfcfd4;line-height:1.65;font-size:16px;max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{border:0;border-radius:16px;padding:15px 18px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn-primary{background:#ff4fa3;color:#100008}.btn-dark{background:#1b1b22;color:#fff;border:1px solid #303039}
+    .mock-card{background:radial-gradient(circle at top,#24242b,#111116 60%);border:1px solid #2b2b33;border-radius:34px;padding:26px;box-shadow:0 25px 80px #0008;position:relative;overflow:hidden}.mock-card:before{content:"";position:absolute;inset:auto -70px -80px auto;width:220px;height:220px;background:#ff4fa355;filter:blur(60px);border-radius:50%}.tshirt{width:100%;max-width:380px;margin:auto;display:block;filter:drop-shadow(0 35px 35px #0008)}.price{position:absolute;top:22px;right:22px;background:#fff;color:#000;border-radius:18px;padding:10px 13px;font-weight:900}
+    .section-title{font-size:30px;margin:20px 0 10px;letter-spacing:-1px}.muted{color:#aaa;line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}.product{background:#141419;border:1px solid #292932;border-radius:26px;padding:18px;transition:.2s}.product:hover{transform:translateY(-4px);border-color:#ff4fa3aa}.product-img{height:210px;border-radius:22px;background:#f2f2f2;display:grid;place-items:center;margin-bottom:14px;overflow:hidden;background-size:cover;background-position:center}.product-img.black{background:#070707}.product-img.pink{background:#ffd3e7}.mini-shirt{width:130px;height:150px;position:relative;background:#fff;border-radius:32px 32px 18px 18px;clip-path:polygon(24% 0,38% 8%,62% 8%,76% 0,100% 20%,86% 42%,78% 34%,78% 100%,22% 100%,22% 34%,14% 42%,0 20%)}.mini-shirt.black{background:#111}.mini-shirt.pink{background:#ff8fc4}.mini-shirt:after{content:"TB3LI";position:absolute;top:58px;left:50%;transform:translateX(-50%);font-weight:900;color:#ff4fa3;font-size:18px}.mini-shirt.black:after{color:#fff}.mini-shirt.pink:after{color:#111}.product h3{font-size:17px;margin-bottom:8px}.product p{color:#aaa;font-size:14px;line-height:1.45}.product button,.delete-btn{margin-top:14px;width:100%;background:#fff;color:#050505;border:0;border-radius:14px;padding:13px;font-weight:900;cursor:pointer}.delete-btn{background:#ff3b3b;color:white}
+    .order,.admin-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;margin:34px 0;background:#121216;border:1px solid #2a2a31;border-radius:30px;padding:22px}form{display:grid;gap:12px}label{font-size:13px;color:#c9c9ce;font-weight:700}input,select,textarea{width:100%;border:1px solid #33333c;background:#0b0b0e;color:#fff;border-radius:14px;padding:14px;outline:none}input:focus,select:focus,textarea:focus{border-color:#ff4fa3}textarea{min-height:90px;resize:vertical}.file-note{font-size:12px;color:#aaa;margin-top:-5px}.preview-box{border:1px dashed #444;border-radius:22px;min-height:250px;display:grid;place-items:center;text-align:center;color:#aaa;padding:18px;background:#0d0d11;overflow:hidden}.preview-box img{max-width:100%;max-height:260px;border-radius:18px}.whatsapp-submit,.save-btn{background:#25D366!important;color:#06130a!important;font-size:16px!important;border:0;border-radius:14px;padding:14px;font-weight:900;cursor:pointer}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 28px}.step{background:#141419;border:1px solid #292932;border-radius:22px;padding:18px}.step b{color:#ff4fa3}.step p{color:#aaa;margin-top:8px;line-height:1.5;font-size:14px}footer{padding:22px 0;color:#85858d;text-align:center;font-size:13px}.hidden{display:none!important}.admin-mini{background:#0e0e13;border:1px solid #2a2a31;border-radius:20px;padding:14px;margin-top:12px}.admin-mini img{width:100%;max-height:180px;object-fit:cover;border-radius:14px;margin-top:10px}
+    @media(max-width:850px){.hero,.order,.admin-panel{grid-template-columns:1fr}.grid,.steps{grid-template-columns:1fr}.wa-top{display:none}.page{padding:16px}.mock-card{padding:18px}.product-img{height:180px}}
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">TB3<span>LI</span></div>
-  <nav>
-    <a href="#login">Log in</a>
-    <a href="#products">Produits</a>
-    <a href="#custom">Personnaliser</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="top-btn" href="https://wa.me/212725200518" target="_blank">WhatsApp</a>
-</header>
+  <div class="page">
+    <header>
+      <div class="brand"><div class="logo"><img src="data:image/jpeg;base64,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" alt="TB3LI logo"></div><div><h1>TB3LI</h1><p>Print on demand • T-shirts custom</p></div></div>
+      <div class="top-actions"><button class="admin-link" onclick="openAdminLogin()">Admin</button><a class="wa-top" href="https://wa.me/212725200518" target="_blank">Commander WhatsApp</a></div>
+    </header>
 
-<section class="hero">
-  <div>
-    <span class="badge">Print On Demand Morocco</span>
-    <h1>PRINT YOUR<br>T-SHIRT</h1>
-    <p>T-shirts personnalisés · 180 DH · Livraison gratuite Casa & Mohammedia</p>
-    <a class="btn yellow" href="#products">Voir les modèles</a>
+    <main id="shopPage">
+      <section class="hero">
+        <div><span class="badge">🔥 T-shirt custom direct men Instagram</span><h2>Upload design dyalk, <span class="pink">TB3LI</span> kaytb3o lik.</h2><div class="actions"><a href="#order" class="btn btn-primary">Bda commande</a><a href="#models" class="btn btn-dark">Chof les modèles</a></div></div>
+        <div class="mock-card"><div class="price">180 DH</div><svg class="tshirt" viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg"><path d="M98 33L139 12C151 30 166 38 180 38C194 38 209 30 221 12L262 33L332 103L286 159L257 132V390H103V132L74 159L28 103L98 33Z" fill="#ffffff"/><path d="M139 12C151 30 166 38 180 38C194 38 209 30 221 12C211 57 149 57 139 12Z" fill="#eeeeee"/><rect x="123" y="150" width="114" height="90" rx="18" fill="#0b0b0d"/><text x="180" y="190" text-anchor="middle" font-size="26" font-weight="900" fill="#ff4fa3">TB3LI</text><text x="180" y="218" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">CUSTOM PRINT</text></svg></div>
+      </section>
+      <section class="steps"><div class="step"><b>01</b><p>Client kaykhtar modèle, couleur, taille.</p></div><div class="step"><b>02</b><p>Kayuploadi design/photo/logo dyalo.</p></div><div class="step"><b>03</b><p>Commande katsift lik f WhatsApp b details.</p></div></section>
+      <section id="models"><h2 class="section-title">Les modèles</h2><p class="muted">Khdam b noir, blanc, rose. Admin y9dr yzid modèles jdod bla code.</p><div class="grid" id="productsGrid"></div></section>
+      <section id="order" class="order"><div><h2 class="section-title">Commande custom</h2><p class="muted">3mer l infos, uploadi design, men b3d click 3la WhatsApp. Message ghadi ytkteb بوحدو فيه الطلب كامل.</p><div class="preview-box" id="previewBox">Preview dyal design ghadi yban hna</div></div><form onsubmit="sendWhatsApp(event)"><div><label>Nom</label><input id="name" placeholder="Smitk" required></div><div><label>Numéro client</label><input id="phone" placeholder="06..." required></div><div><label>Modèle</label><select id="model" required></select></div><div><label>Taille</label><select id="size" required><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select></div><div><label>Upload design</label><input id="design" type="file" accept="image/*" onchange="previewImage(event)"><p class="file-note">Note: WhatsApp link ma kay9drch ysift fichier automatic. Client yclick o ysift image f WhatsApp.</p></div><div><label>Message / détails</label><textarea id="details" placeholder="Fin bghiti design? front/back? livraison? ..."></textarea></div><button class="whatsapp-submit" type="submit">Sift demande f WhatsApp</button></form></section>
+    </main>
+
+    <section id="adminLogin" class="admin-panel hidden"><div><h2 class="section-title">Admin TB3LI</h2><p class="muted">Dkhol b code bach tzid modèles bla ma tbedel code.</p></div><form onsubmit="loginAdmin(event)"><div><label>Code admin</label><input id="adminCode" type="password" placeholder="Dkhel code" required></div><button class="save-btn" type="submit">Dkhol</button><button class="btn btn-dark" type="button" onclick="backShop()">رجوع للمتجر</button></form></section>
+
+    <section id="adminPage" class="admin-panel hidden"><div><h2 class="section-title">Gestion modèles</h2><p class="muted">Zid smiya, description, couleur/mockup, prix. Ila bghiti image, uploadiha o ghadi tb9a f had browser.</p><div id="adminList"></div></div><form onsubmit="addProduct(event)"><div><label>Nom modèle</label><input id="newName" placeholder="Ex: Oversize noir" required></div><div><label>Description</label><textarea id="newDesc" placeholder="Ex: T-shirt oversize, style streetwear" required></textarea></div><div><label>Prix</label><input id="newPrice" placeholder="180 DH" value="180 DH" required></div><div><label>Couleur mockup</label><select id="newColor"><option value="white">Blanc</option><option value="black">Noir</option><option value="pink">Rose</option></select></div><div><label>Image modèle optional</label><input id="newImage" type="file" accept="image/*"></div><button class="save-btn" type="submit">Ajouter modèle</button><button class="btn btn-dark" type="button" onclick="backShop()">Voir le site</button><button class="delete-btn" type="button" onclick="resetProducts()">Reset modèles</button></form></section>
+
+    <footer>TB3LI © Print on demand — Casablanca / Mohammedia livraison free</footer>
   </div>
-</section>
 
-<section id="products">
-  <div class="container">
-    <h2 class="section-title">NOS T-SHIRTS</h2>
-    <p class="section-subtitle">Livraison free Casa & Mohammedia · Design personnalisé sur chaque modèle · Commande direct WhatsApp.</p>
-    <div class="products">
-      <div class="card">
-        <div class="card-img">
-          <svg class="shirt-svg" viewBox="0 0 300 300"><path d="M88 52 L122 28 H178 L212 52 L262 75 L234 125 L214 115 V260 H86 V115 L66 125 L38 75 Z" fill="#090909"/><path d="M122 28 Q150 62 178 28" fill="none" stroke="#222" stroke-width="5"/><path d="M86 260 H214" stroke="#333" stroke-width="4"/></svg>
-        </div>
-        <div class="content">
-          <span class="tag">CLASSIC</span>
-          <h3>Black T-Shirt</h3>
-          <p>T-shirt noir premium avec design personnalisé. Envoie ton logo ou ton idée sur WhatsApp.</p>
-          <p class="small-note">✅ Livraison free Casa & Mohammedia</p>
-          <div class="price">180 DH</div>
-          <button class="btn" onclick="selectProduct('Black T-Shirt')">Commander</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <svg class="shirt-svg" viewBox="0 0 300 300"><path d="M88 52 L122 28 H178 L212 52 L262 75 L234 125 L214 115 V260 H86 V115 L66 125 L38 75 Z" fill="#ffffff" stroke="#ddd" stroke-width="3"/><path d="M122 28 Q150 62 178 28" fill="none" stroke="#e6e6e6" stroke-width="5"/><path d="M86 260 H214" stroke="#eee" stroke-width="4"/></svg>
-        </div>
-        <div class="content">
-          <span class="tag">BEST SELLER</span>
-          <h3>White T-Shirt</h3>
-          <p>T-shirt blanc clean avec design personnalisé. Parfait pour impression DTF.</p>
-          <p class="small-note">✅ Livraison free Casa & Mohammedia</p>
-          <div class="price">180 DH</div>
-          <button class="btn" onclick="selectProduct('White T-Shirt')">Commander</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <svg class="shirt-svg" viewBox="0 0 300 300"><path d="M88 52 L122 28 H178 L212 52 L262 75 L234 125 L214 115 V260 H86 V115 L66 125 L38 75 Z" fill="#f5a9c4" stroke="#e28aaa" stroke-width="3"/><path d="M122 28 Q150 62 178 28" fill="none" stroke="#e28aaa" stroke-width="5"/><path d="M86 260 H214" stroke="#e28aaa" stroke-width="4"/></svg>
-        </div>
-        <div class="content">
-          <span class="tag">NEW COLOR</span>
-          <h3>Pink T-Shirt</h3>
-          <p>T-shirt rose simple avec design personnalisé. Style moderne et tendance.</p>
-          <p class="small-note">✅ Livraison free Casa & Mohammedia</p>
-          <div class="price">180 DH</div>
-          <button class="btn" onclick="selectProduct('Pink T-Shirt')">Commander</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <img class="wac-design" src="wac.png" alt="WAC Casablanca design">
-        </div>
-        <div class="content">
-          <span class="tag">SPECIAL WAC</span>
-          <h3>WAC Casablanca</h3>
-          <p>Design House of Benjelloune sur t-shirt blanc. Personnalisation possible.</p>
-          <p class="small-note">✅ Livraison free Casa & Mohammedia</p>
-          <div class="price">180 DH</div>
-          <button class="btn" onclick="selectProduct('WAC Casablanca T-Shirt')">Commander</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="custom">
-  <div class="container">
-    <h2 class="section-title">CUSTOM ORDER</h2>
-    <p class="section-subtitle">عمر المعلومات وغادي تتحل WhatsApp برسالة واجدة.</p>
-    <div class="custom-box">
-      <label>Product</label>
-      <select id="product">
-        <option>Black T-Shirt</option>
-        <option>White T-Shirt</option>
-        <option>Pink T-Shirt</option>
-        <option>WAC Casablanca T-Shirt</option>
-        <option>Oversized T-Shirt</option>
-        <option>Design personnalisé</option>
-      </select>
-      <label>Color</label>
-      <select id="color">
-        <option>Black</option>
-        <option>White</option>
-        <option>Pink</option>
-      </select>
-      <label>Size</label>
-      <select id="size">
-        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
-      </select>
-      <label>Your Name</label>
-      <input id="name" type="text" placeholder="Write your name">
-      <label>Design personnalisé / Note</label>
-      <textarea id="note" placeholder="Example: bghit logo f front / bghit design WAC / ghadi nsift image f WhatsApp / bghit design personnalisé"></textarea>
-      <button class="btn" onclick="orderWhatsApp()">Order on WhatsApp</button>
-    </div>
-  </div>
-</section>
-
-<section id="login">
-  <div class="container">
-    <h2 class="section-title">ADMIN LOGIN</h2>
-    <p class="section-subtitle">Page login pour modifier le site. Seul le compte admin peut entrer.</p>
-    <div class="login-box">
-      <div class="warning">Note: had login simple. Pour sécurité vraie, modifier toujours via GitHub.</div>
-      <label>Email</label>
-      <input id="adminEmail" type="email" placeholder="admin email">
-      <label>Password</label>
-      <input id="adminPassword" type="password" placeholder="password">
-      <button class="btn" onclick="adminLogin()">Log in</button>
-      <div id="adminPanel" class="admin-panel">
-        <h3>Admin Panel</h3>
-        <p>✅ Connected as TB3LI admin.</p>
-        <p>Pour modifier site: GitHub → index.html → Edit → Commit changes.</p>
-        <a class="btn yellow" href="https://github.com/badraitrabai06-hub/TB3LI-SITE" target="_blank">Open GitHub Admin</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="features">
-  <div class="container features-grid">
-    <div class="feature"><h3>Qualité Premium</h3><p>Tissus confortable et impression propre.</p></div>
-    <div class="feature"><h3>Prix Fixe</h3><p>180 DH seulement.</p></div>
-    <div class="feature"><h3>Livraison Free</h3><p>Gratuite Casablanca & Mohammedia.</p></div>
-    <div class="feature"><h3>Design Personnalisé</h3><p>Kol modèle t9der tzid fih design dyalek.</p></div>
-    <div class="feature"><h3>Support</h3><p>Commande directe via WhatsApp.</p></div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-title">TB3LI</h2>
-    <p>Custom t-shirts on demand. Commande daba.</p>
-    <a class="btn yellow" href="https://wa.me/212725200518" target="_blank">0725200518</a>
-  </div>
-</section>
-
-<footer>© 2026 TB3LI — Print On Demand Morocco</footer>
-<a class="whatsapp" href="https://wa.me/212725200518" target="_blank">WhatsApp</a>
-
-<script>
-function selectProduct(productName){
-  document.getElementById('product').value = productName;
-  document.getElementById('custom').scrollIntoView({behavior:'smooth'});
-}
-function adminLogin(){
-  const email=document.getElementById('adminEmail').value.trim();
-  const password=document.getElementById('adminPassword').value.trim();
-  if(email==='badraitrabai06@gmail.com' && password==='badr.200'){
-    document.getElementById('adminPanel').style.display='block';
-  }else{
-    alert('Email ou password incorrect');
-  }
-}
-function orderWhatsApp(){
-  const product=document.getElementById('product').value;
-  const color=document.getElementById('color').value;
-  const size=document.getElementById('size').value;
-  const name=document.getElementById('name').value || 'Client';
-  const note=document.getElementById('note').value || 'I will send design on WhatsApp';
-  const message=`Salam TB3LI, bghit ndir order:%0A%0AName: ${encodeURIComponent(name)}%0AProduct: ${encodeURIComponent(product)}%0AColor: ${encodeURIComponent(color)}%0ASize: ${encodeURIComponent(size)}%0APrice: 180 DH%0ANote: ${encodeURIComponent(note)}%0A%0ALivraison: Casablanca/Mohammedia free`;
-  window.open(`https://wa.me/212725200518?text=${message}`,'_blank');
-}
-</script>
+  <script>
+    const adminNumber = "212725200518";
+    const ADMIN_CODE = "-1802-";
+    const defaultProducts = [
+      {name:'T-shirt blanc',desc:'Mockup clean, مناسب لأي design.',price:'180 DH',color:'white',image:''},
+      {name:'T-shirt noir',desc:'Style streetwear, design kayban قوي.',price:'180 DH',color:'black',image:''},
+      {name:'T-shirt rose',desc:'Couleur spéciale dyal TB3LI.',price:'180 DH',color:'pink',image:''}
+    ];
+    let products = JSON.parse(localStorage.getItem('tb3li_products') || 'null') || defaultProducts;
+    function saveProducts(){localStorage.setItem('tb3li_products', JSON.stringify(products));}
+    function renderProducts(){
+      const grid = document.getElementById('productsGrid');
+      const modelSelect = document.getElementById('model');
+      grid.innerHTML = ''; modelSelect.innerHTML = '<option value="">Choisir modèle</option>';
+      products.forEach((p,i)=>{
+        const bgClass = p.color === 'black' ? 'black' : p.color === 'pink' ? 'pink' : '';
+        const shirtClass = p.color === 'black' ? 'black' : p.color === 'pink' ? 'pink' : '';
+        const imgStyle = p.image ? `style="background-image:url('${p.image}')"` : '';
+        grid.innerHTML += `<div class="product"><div class="product-img ${bgClass}" ${imgStyle}>${p.image ? '' : `<div class="mini-shirt ${shirtClass}"></div>`}</div><h3>${p.name}</h3><p>${p.desc}</p><p><b>${p.price}</b></p><button onclick="selectModel('${p.name.replace(/'/g,"\\'")}')">Choisir</button></div>`;
+        modelSelect.innerHTML += `<option>${p.name}</option>`;
+      });
+      modelSelect.innerHTML += '<option>Autre modèle custom</option>';
+      renderAdminList();
+    }
+    function renderAdminList(){
+      const list = document.getElementById('adminList'); if(!list) return;
+      list.innerHTML = '';
+      products.forEach((p,i)=>{list.innerHTML += `<div class="admin-mini"><b>${p.name}</b><p class="muted">${p.desc} — ${p.price}</p>${p.image ? `<img src="${p.image}">` : ''}<button class="delete-btn" onclick="deleteProduct(${i})">Supprimer</button></div>`;});
+    }
+    function selectModel(model){document.getElementById('model').value = model;document.getElementById('order').scrollIntoView({behavior:'smooth'});}
+    function previewImage(event){const file = event.target.files[0];const box = document.getElementById('previewBox');if(!file){box.innerHTML='Preview dyal design ghadi yban hna';return;}const img = document.createElement('img');img.src = URL.createObjectURL(file);box.innerHTML = '';box.appendChild(img);}
+    function sendWhatsApp(e){e.preventDefault();const name=document.getElementById('name').value;const phone=document.getElementById('phone').value;const model=document.getElementById('model').value;const size=document.getElementById('size').value;const details=document.getElementById('details').value||'Ma kayn ta detail';const hasDesign=document.getElementById('design').files.length?'Oui, ghadi nsift design/photo f WhatsApp':'Mazal ma uploaditch design';const msg=`Salam TB3LI, bghit ndir commande custom:%0A%0A👤 Nom: ${name}%0A📞 Numero: ${phone}%0A👕 Modele: ${model}%0A📏 Taille: ${size}%0A🎨 Design: ${hasDesign}%0A📝 Details: ${details}%0A%0APrix: 180 DH%0ALivraison: free Casablanca/Mohammedia`;window.open(`https://wa.me/${adminNumber}?text=${msg}`,'_blank');}
+    function hideAll(){document.getElementById('shopPage').classList.add('hidden');document.getElementById('adminLogin').classList.add('hidden');document.getElementById('adminPage').classList.add('hidden');}
+    function openAdminLogin(){hideAll();document.getElementById('adminLogin').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});}
+    function backShop(){hideAll();document.getElementById('shopPage').classList.remove('hidden');renderProducts();window.scrollTo({top:0,behavior:'smooth'});}
+    function loginAdmin(e){e.preventDefault();const code=document.getElementById('adminCode').value;if(code===ADMIN_CODE){hideAll();document.getElementById('adminPage').classList.remove('hidden');renderAdminList();window.scrollTo({top:0,behavior:'smooth'});}else{alert('Code ghalat');}}
+    function addProduct(e){
+      e.preventDefault();
+      const file=document.getElementById('newImage').files[0];
+      const product={name:document.getElementById('newName').value,desc:document.getElementById('newDesc').value,price:document.getElementById('newPrice').value,color:document.getElementById('newColor').value,image:''};
+      if(file){const reader=new FileReader();reader.onload=()=>{product.image=reader.result;products.push(product);saveProducts();renderProducts();e.target.reset();document.getElementById('newPrice').value='180 DH';alert('Modèle tzad ✅');};reader.readAsDataURL(file);}else{products.push(product);saveProducts();renderProducts();e.target.reset();document.getElementById('newPrice').value='180 DH';alert('Modèle tzad ✅');}
+    }
+    function deleteProduct(i){if(confirm('Supprimer had modèle?')){products.splice(i,1);saveProducts();renderProducts();}}
+    function resetProducts(){if(confirm('Trje3 modèles l original?')){products=[...defaultProducts];saveProducts();renderProducts();}}
+    renderProducts();
+  </script>
 </body>
 </html>
+
 
 
 
